@@ -1,0 +1,5 @@
+interface:
+  display_name: "Git Commit Series"
+  short_description: "Plan logical, verifiable Git commit series"
+policy:
+  allow_implicit_invocation: false

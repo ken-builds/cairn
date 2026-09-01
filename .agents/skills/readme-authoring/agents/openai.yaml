@@ -1,0 +1,6 @@
+interface:
+  display_name: "README Authoring"
+  short_description: "Write verified, audience-focused README files"
+  default_prompt: "Use $readme-authoring to audit and draft a verified README for this repository."
+policy:
+  allow_implicit_invocation: true

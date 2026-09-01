@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "architecture-design": {
+      "source": "ken-builds/skills",
+      "sourceType": "github",
+      "skillPath": "skills/architecture-design/SKILL.md",
+      "computedHash": "db52c28d0f06754ebf402fde8f8050a4f962693f720bb24b5b012d5a66326de9"
+    },
+    "git-commit-series": {
+      "source": "ken-builds/skills",
+      "sourceType": "github",
+      "skillPath": "skills/git-commit-series/SKILL.md",
+      "computedHash": "252e88330dd4e8d07fce16c44288e0b0dea76fc5cc34914c4fd555dc4f68874f"
+    },
+    "greenfield-foundation": {
+      "source": "ken-builds/skills",
+      "sourceType": "github",
+      "skillPath": "skills/greenfield-foundation/SKILL.md",
+      "computedHash": "3eba17e6648d4eee73dc5e32482b548a6c2a807a95b466ee512736ac96809c4e"
+    },
+    "readme-authoring": {
+      "source": "ken-builds/skills",
+      "sourceType": "github",
+      "skillPath": "skills/readme-authoring/SKILL.md",
+      "computedHash": "184630c1261b9da5f29260a525bfc5036da941ca3cef6a3d589ee01b3850ab44"
+    }
+  }
+}

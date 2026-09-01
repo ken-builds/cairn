@@ -1,0 +1,6 @@
+interface:
+  display_name: "Greenfield Foundation"
+  short_description: "Design a durable foundation for new software systems"
+  default_prompt: "Use $greenfield-foundation to design a staged, evidence-backed foundation for this new software system."
+policy:
+  allow_implicit_invocation: false
