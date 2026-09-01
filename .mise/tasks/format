@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#MISE description="Apply Biome formatting to project files"
+set -euo pipefail
+
+cd "${MISE_PROJECT_ROOT:?MISE_PROJECT_ROOT is not set}"
+
+exec mise exec -- pnpm run format

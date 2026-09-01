@@ -1,0 +1,9 @@
+[tools]
+node = "22"
+python = "3.12.14"
+pnpm = "11.25.0"
+"aqua:pre-commit/pre-commit" = "4.6.2"
+"aqua:cocogitto/cocogitto" = "7.0.0"
+
+[settings]
+task.run_auto_install = false

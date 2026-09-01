@@ -1,0 +1,13 @@
+{
+  "name": "@cairn/example",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Internal workspace fixture used to verify the monorepo toolchain.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "cairn",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=22.13.0 <23",
+    "pnpm": ">=11.25.0 <12"
+  },
+  "scripts": {
+    "format": "biome format . --write",
+    "format:check": "biome ci . --linter-enabled=false --assist-enabled=false",
+    "lint:biome": "biome ci . --formatter-enabled=false --assist-enabled=false --error-on-warnings",
+    "lint:oxlint": "oxlint packages --deny-warnings",
+    "lint": "pnpm run lint:biome && pnpm run lint:oxlint",
+    "test": "pnpm -r --if-present test",
+    "knip": "knip --no-progress --treat-config-hints-as-errors",
+    "check": "pnpm run format:check && pnpm run lint && pnpm run test && pnpm run knip"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.11",
+    "knip": "6.34.0",
+    "oxlint": "1.80.0"
+  }
+}
