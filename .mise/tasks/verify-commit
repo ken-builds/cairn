@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#MISE description="Validate one commit message with Cocogitto"
+set -euo pipefail
+
+cd "${MISE_PROJECT_ROOT:?MISE_PROJECT_ROOT is not set}"
+
+if [[ "$#" -ne 1 ]]; then
+  printf 'usage: mise run verify-commit <commit-message-file>\n' >&2
+  exit 2
+fi
+
+exec mise exec -- cog verify --file "$1"

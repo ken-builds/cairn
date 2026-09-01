@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#MISE description="Run the complete local quality gate"
+set -euo pipefail
+
+cd "${MISE_PROJECT_ROOT:?MISE_PROJECT_ROOT is not set}"
+
+for task in check format setup verify-commit; do
+  bash -n ".mise/tasks/${task}"
+done
+
+mise exec -- pre-commit validate-config
+mise exec -- pnpm run check
+mise exec -- cog check

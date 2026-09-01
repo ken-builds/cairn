@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#MISE description="Install project tools, dependencies, and Git hooks"
+set -euo pipefail
+
+cd "${MISE_PROJECT_ROOT:?MISE_PROJECT_ROOT is not set}"
+
+mise install
+if [[ -f pnpm-lock.yaml ]]; then
+  mise exec -- pnpm install --frozen-lockfile
+else
+  mise exec -- pnpm install
+fi
+mise exec -- pre-commit install --install-hooks --hook-type pre-commit --hook-type commit-msg
