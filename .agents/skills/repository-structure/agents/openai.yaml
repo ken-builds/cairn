@@ -1,0 +1,6 @@
+interface:
+  display_name: "Repository Structure"
+  short_description: "Evolve directory and component boundaries"
+  default_prompt: "Use $repository-structure to audit component boundaries, local context, growth signals, and a safe repository structure migration."
+policy:
+  allow_implicit_invocation: true

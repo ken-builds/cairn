@@ -66,6 +66,12 @@ Read only the references that the current branch reaches:
   could change the candidate ranking.
 - Read [artifact-contract.md](references/artifact-contract.md) before writing or validating
   an Architecture Brief, ADR, Evidence record, Probe record, or Sensor record.
+- When the primary question is physical tree shape, component grouping, local boundary context,
+  ownership coverage, or an approved path migration, use `$repository-structure`; keep public
+  contracts, data, runtime, deployment, and durable cross-module decisions in this skill.
+- After product-code implementation, use `$implementation-rationale` when available and the
+  change exposes a public API documentation gap or non-obvious implementation rationale; it
+  owns source-level API comments, rationale comments, and the implementation record.
 
 ## Workflow
 

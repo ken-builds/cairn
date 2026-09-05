@@ -88,6 +88,12 @@ Read only the references reached by the current branch:
   skeleton, Definition of Ready/Done, release evolution, or the implementation handoff.
 - Read [evidence-and-probes.md](references/evidence-and-probes.md) when a dynamic external fact or
   decision-changing feasibility unknown can affect the candidate ranking.
+- Use `$repository-structure` when the proposed repository layout, component README coverage,
+  ownership map, or dependency boundaries need a focused structure review; keep the initial
+  system mandate and foundation blueprint in this skill.
+- After product-code implementation, use `$implementation-rationale` when available and
+  implementation findings need public API documentation comments, source rationale, executable
+  sensors, an implementation record, or drift reconciliation.
 
 ## Workflow
 
