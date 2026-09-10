@@ -1,7 +1,8 @@
 # Structure migration playbook
 
 Use this playbook only after the target paths, candidate, public-path policy, and rollback point
-have explicit approval. A directory move is a repository-wide change even when runtime behavior
+fit the user's approved scope. Carry existing authorization forward; ask only for effects
+outside it. A directory move is a repository-wide change even when runtime behavior
 is intended to remain constant.
 
 ## 1. Freeze the migration boundary
@@ -15,7 +16,7 @@ changes. Confirm whether every moved path is private, internal, or public to a c
 ## 2. Prepare a characterization gate
 
 Run the narrowest existing checks that describe current behavior and public compatibility. If the
-repository lacks a useful check, record that gap and add it only when separately authorized. Use a
+repository lacks a useful check, record the gap and add it within the authorized scope. Use a
 disposable copy for experiments that install tools or create generated output.
 
 **Done when:** the baseline checks, environment, and limitations are recorded as passed, failed,
@@ -72,7 +73,8 @@ unclassified old-path or public-compatibility issue remains.
 
 ## 7. Commit and rollback
 
-Use `$git-commit-series` when available. A reviewable default series is:
+When the user requests `$git-commit-series`, pass the approved scope and migration evidence.
+It is user-invoked; otherwise follow the repository's authorized commit workflow. A default series is:
 
 1. accepted policy/README and sensor changes;
 2. path-only move and reference repair;

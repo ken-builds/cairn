@@ -91,7 +91,9 @@ observability, and evidence links>
 ```
 
 The Map and Glossary may link to existing repository records instead of copying them. Keep
-the Brief's table rows traceable to those sources. If a section has no applicable content,
+the Brief's table rows traceable to those sources. Scope the Map to discovered boundaries and
+the Glossary to introduced, changed, overloaded, or affected cross-boundary domain terms.
+Record search limits and unresolved edges. If a section has no applicable content,
 write `None — not applicable because <reason>` rather than silently omitting the section.
 
 ## Architecture Decision Record
@@ -199,6 +201,12 @@ Waiver/expiry: <if applicable>
 ```
 
 ## Handoff rules
+
+Verification records expected/selected targets, pass/fail/skip outcomes, and uncovered contracts.
+For new/materially changed critical gates, link valid/violation fixture results or state that
+effectiveness remains `unknown`. Record-format checks establish neither coverage nor design
+correctness. Use `--fail-on-skip` when every Markdown target must be recognized; mixed directories
+need an explicit routing/coverage account for other record kinds.
 
 The final response should link the Brief and ADRs and summarize their statuses. It may
 repeat the selected candidate and next action, but it should not create a competing glossary,

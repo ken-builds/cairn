@@ -3,4 +3,4 @@ interface:
   short_description: "Design evidence-backed architecture changes"
   default_prompt: "Use $architecture-design to design this cross-module change with a global model, evidence, and validated decision record."
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

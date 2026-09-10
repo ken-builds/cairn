@@ -34,6 +34,10 @@ universal requirements.
 
 ### Boundaries and architecture style
 
+- For a proposed abstraction, name its consumer, contract owner, hidden variation, and concrete
+  assembly point. Test a driver-motivated substitution: which parts change and which consumer
+  behavior stays fixed? A test seam or trust boundary can justify separation without multiple
+  implementations. Otherwise keep concrete code and a revisit trigger.
 - Start with a modular monolith or the smallest number of deployable units that can express the
   real ownership boundaries.
 - Split a process or service when independent release, scaling, security isolation, failure
@@ -72,7 +76,7 @@ universal requirements.
 
 ## Candidate comparison card
 
-For every candidate that survives the first screen, record:
+For candidates that survive the first screen, record the dimensions relevant to their drivers:
 
 1. **Boundary** — what it owns, hides, and exposes.
 2. **Flow** — how requests, events, data, and failures move through it.

@@ -98,7 +98,10 @@ CI remain authoritative for values that can change independently.
 
 ## Verification and closure
 
-Verification records the command, relevant environment, result, and limitation. A command that was
+Verification records the command, expected/selected targets, environment, result, skips, and
+limitation. New/materially changed critical gates need valid/violation fixture evidence or
+a pending effectiveness check. Format validation proves neither API coverage nor behavior.
+A command that was
 not run is `not-run` with a prerequisite or owner; an unavailable dependency or permission is
 `blocked`. "Tests passed" without the command or scope is not a verification record.
 

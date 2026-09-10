@@ -3,6 +3,19 @@
 Use this reference when a fact can change the foundation choice. The goal is a bounded evidence
 ledger and a small decision instrument, not an exhaustive technology survey.
 
+## Discover decision-changing premises
+
+Trace the first slice through consumers, data owners, and effects. For each premise capable
+of changing the choice, name counterevidence and the affected decision. Follow only reached
+branches: retry needs idempotency/ambiguous-completion evidence; derived data needs authority
+and invalidation; multiple writes need interruption points; lifecycle needs ownership and
+release; dependencies need actual compatibility evidence.
+
+Prefer supplied facts and inspectable artifacts, then targeted lookup, then a bounded probe.
+Record unavailable sources and search limits. Reversible defaults may proceed within scope
+with stated impact; missing intent that changes the choice needs input. Keep findings in
+existing assumptions/evidence sections, without a question quota.
+
 ## Claim triage
 
 Classify every material statement before relying on it:
@@ -35,8 +48,9 @@ the target project's manifest and lockfile when they exist.
 ## Authorization and isolation
 
 - Read-only inspection and documentation lookup remain at `design`.
-- Creating experiment files, installing or upgrading dependencies, running load or fault tests,
-  or touching an external service requires explicit `probe` authorization.
+- Creating experiment files, installing dependencies, running fault/load tests, or touching
+  an external service must fit the authorized probe scope. Reuse authorization already given;
+  ask only for an operation or budget beyond it.
 - Keep mutable state in a disposable directory, scratch project, isolated container, or approved
   temporary worktree. Keep credentials, production systems, shared databases, and the real target
   repository outside the experiment.

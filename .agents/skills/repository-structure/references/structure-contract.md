@@ -92,7 +92,8 @@ configuration, or local README instead of duplicating its facts.
 
 The Map is complete only when:
 
-- every in-scope file or directory belongs to one component or an explicit container;
+- every path discovered by the scoped inventory belongs to a component or explicit container;
+  inventory roots, exclusions, and unavailable sources are stated;
 - each component has one primary responsibility and an owner or owned unknown;
 - public entrypoints and private implementation paths are distinguishable;
 - allowed dependency edges use stable boundary IDs rather than incidental filenames;
@@ -100,6 +101,10 @@ The Map is complete only when:
 - local README coverage has a reason rather than a quota;
 - cross-boundary edges and shared components have evidence and consumers;
 - the tree and graph are described as separate views.
+
+Report actual gate selection and pass/fail/skip outcomes for the mapped invariants. A file
+count establishes only that count. A new/materially changed critical gate needs a valid
+fixture and controlled violation proving detection, or an explicit pending check.
 
 ## Optional structure policy
 

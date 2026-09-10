@@ -33,7 +33,8 @@ driver with a threshold.
 Read-only inspection and lightweight checks that leave the repository and external systems
 unchanged can remain at the `design` level. Before creating or modifying experiment files,
 installing/upgrading dependencies, running load or fault injection, or mutating external
-state, obtain explicit `probe` authorization. Put
+state, confirm the operation fits the user's probe authorization, reusing scope already
+given. Ask only when the operation or budget exceeds it. Put
 all mutable state in one of these boundaries:
 
 1. a disposable Git worktree created from the recorded baseline;

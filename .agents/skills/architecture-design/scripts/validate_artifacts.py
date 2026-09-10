@@ -322,6 +322,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("path", type=Path, help="Markdown artifact or directory to inspect")
     parser.add_argument("--kind", choices=("auto", "brief", "adr"), default="auto")
     parser.add_argument("--quiet", action="store_true", help="print only failures")
+    parser.add_argument(
+        "--fail-on-skip", action="store_true",
+        help="fail when a Markdown target is not a supported artifact kind",
+    )
     args = parser.parse_args(argv)
 
     if not args.path.exists():
@@ -333,12 +337,11 @@ def main(argv: list[str] | None = None) -> int:
 
     selected = 0
     failed = 0
+    skipped = 0
     for artifact in iter_markdown(args.path):
         try:
             text = artifact.read_text(encoding="utf-8")
         except UnicodeDecodeError as exc:
-            if args.kind == "auto":
-                continue
             print(f"FAIL {artifact}: cannot decode UTF-8 ({exc})")
             failed += 1
             selected += 1
@@ -346,6 +349,11 @@ def main(argv: list[str] | None = None) -> int:
 
         kind = args.kind if args.kind != "auto" else detect_kind(artifact, text)
         if kind is None:
+            skipped += 1
+            if args.fail_on_skip:
+                failed += 1
+                print(f"FAIL {artifact}: unsupported artifact kind (--fail-on-skip)")
+                continue
             if not args.quiet:
                 print(f"SKIP {artifact}: no Architecture Brief or ADR heading")
             continue
@@ -363,6 +371,8 @@ def main(argv: list[str] | None = None) -> int:
         elif not args.quiet:
             print(f"PASS {artifact} ({kind})")
 
+    if not args.quiet:
+        print(f"Coverage: selected={selected}, skipped={skipped}, failed={failed}")
     if selected == 0:
         print("error: no architecture artifacts found", file=sys.stderr)
         return 2

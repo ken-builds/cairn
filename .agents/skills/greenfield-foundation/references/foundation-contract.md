@@ -22,6 +22,17 @@ owner, or follow-up field.
 
 ## Foundation Brief
 
+Scope the Map to journeys and boundaries discovered in the consulted inputs, with unavailable
+sources and search limits visible. Scope the Glossary to introduced, overloaded, or affected
+cross-boundary domain terms. A checkpoint can reuse task notes or the Brief; it does not
+require another document.
+
+Report record-format validity, check target coverage, and behavioral evidence separately.
+For each relied-on contract, record expected/selected targets and pass/fail/skip outcomes or
+a pending check. New/materially changed critical gates need valid/violation fixture evidence
+or effectiveness `unknown`. `validate_foundation.py --fail-on-skip` rejects unrecognized
+Markdown targets; use it for scopes in which every file is expected to be a Brief or ADR.
+
 Use one Foundation Brief per coherent greenfield initiative. It is the exploration and
 implementation handoff record; an ADR is the authoritative record for each durable choice.
 

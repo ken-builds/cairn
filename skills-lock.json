@@ -5,7 +5,7 @@
       "source": "ken-builds/skills",
       "sourceType": "github",
       "skillPath": "skills/architecture-design/SKILL.md",
-      "computedHash": "4b2e6bbb6511eeff51325cc6b9e5a2eefcb558522b6c15c8f01571f7f5610319"
+      "computedHash": "22216d9997267909f0f4d59cd6f9bc3748a29b620ca37237678c10e71360b707"
     },
     "git-commit-series": {
       "source": "ken-builds/skills",
@@ -17,13 +17,13 @@
       "source": "ken-builds/skills",
       "sourceType": "github",
       "skillPath": "skills/greenfield-foundation/SKILL.md",
-      "computedHash": "a8f307a196015748e5e0364192faf3d141f598abb84bb71b1250bf345412875f"
+      "computedHash": "945d172ec475fab7e2941c4a43b9440a072a4995ec87b847223d849535f18b9a"
     },
     "implementation-rationale": {
       "source": "ken-builds/skills",
       "sourceType": "github",
       "skillPath": "skills/implementation-rationale/SKILL.md",
-      "computedHash": "e5e7d0381e298edc7110d223b58bbea0883ea048575ef25aa11ca2030e4f4bf5"
+      "computedHash": "7c65061a2e5413a96cf9b225c6be8e090184c72af70b4e2c444b3d23443b694b"
     },
     "readme-authoring": {
       "source": "ken-builds/skills",
@@ -35,7 +35,7 @@
       "source": "ken-builds/skills",
       "sourceType": "github",
       "skillPath": "skills/repository-structure/SKILL.md",
-      "computedHash": "29a4395aa90b8127df49a02692a4387805949ac81766ff729596c9f5159d11b1"
+      "computedHash": "f1c331f9e70ded81c08e9b907ab03606adb7f42e031105e48b0bb1eff8e5c6be"
     }
   }
 }

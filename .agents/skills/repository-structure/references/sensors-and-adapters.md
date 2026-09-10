@@ -17,6 +17,19 @@ already expose.
 | Structure matches accepted records | Tree/Map diff in review or CI | Record drift as a superseding decision or an owned waiver |
 | Historical coupling stays understood | Bounded version-control churn/co-change report | Use as evidence for review, never as an automatic move command |
 
+## Coverage and effectiveness
+
+For each relied-on invariant, record expected targets, targets actually selected, results,
+and unsupported/skipped targets. Verify the owning gate invokes the check. A format validator
+may skip other record kinds; a filesystem inventory does not check dependency edges.
+
+For a new/materially changed critical gate, use isolated valid and violating fixtures. The
+violation must fail for the intended reason, not a setup error. Preserve useful regression
+fixtures. Until observed, leave effectiveness `unknown` with a next check.
+
+Report document validity, target coverage, and semantic behavior separately. The inventory
+owns filesystem measurements; project-native adapters own graph/visibility enforcement.
+
 ## Inventory helper
 
 The bundled `scripts/inventory_structure.py` is intentionally language-agnostic. It may measure:
